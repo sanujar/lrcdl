@@ -75,6 +75,7 @@ else:
 	if data.get("syncType") == "LINE_SYNCED":
 		lines = data['lines']
 
+		title = title.replace('/', '-')  # Replace forward slash with hyphen
 		with open(r'C:\Lyrics\{} - {}.lrc'.format(artist, title), 'w', encoding='utf-8') as f:
 			# Write the inputs at the top of the output file
 			f.write('[ar: "{}"]\n'.format(artist))
